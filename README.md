@@ -1,56 +1,24 @@
-# lxqt-makedeb
+# lxqt-pacstall
 
-### Prerequisites
+### Is only recommended for Ubuntu ≥ 25.04 and Debian ≥ 13.0
 
-- `makedeb` - https://www.makedeb.org/
+#### Prerequisites
 
-### Installation
+- Pacstall: https://pacstall.dev/
+- Cmake
 
-1. Clone this repo: `git clone https://github.com/isf63/lxqt-makedeb; cd lxqt-makedeb`.
-2. To install all of LXQt -git, run `./install.sh all`. This builds and installs all packages in the correct order.
+#### Usage
 
-   To install specific components only, run e.g. `./install.sh lxqt-panel-git lxqt-config-git`.
+- Build and install all LXQt git packages: `./install.sh all`
 
-   NOTE: Some dependencies may not be satisfied installing individually. Refer to https://github.com/lxqt/lxqt/wiki/Building-from-source for build order.
+- Build and install only individual packages: e.g. `./install.sh lximage-qt-git qps-git`, `./install.sh lxqt-admin-git`
 
-To clean all build files except for `PKGBUILD`s, run `./clean.sh`.
+  Note: Installing individual packages may fail as the packages depend on each other. See the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling
 
-`apt autoremove`/`auto autopurge` should be able to be safely run after installation. This will remove unneeded makedepends.
+- Update all installed packages to the most recent commits: `./update.sh`
 
-**Currently only tested and recommended for a reasonably recent version of Ubuntu.**
+- Remove leftover and unneeded make dependencies: `apt autopurge`
 
-### Current PKGBUILDs:
-
-- `libdbusmenu-lxqt-git`
-- `libfm-qt-git`
-- `liblxqt-git`
-- `libqtxdg-git`
-- `libsysstat-git`
-- `lximage-qt-git`
-- `lxqt-about-git`
-- `lxqt-admin-git`
-- `lxqt-archiver-git`
-- `lxqt-build-tools-git`
-- `lxqt-config-git`
-- `lxqt-globalkeys-git`
-- `lxqt-menu-data-git`
-- `lxqt-notificationd-git`
-- `lxqt-panel-git`
-- `lxqt-policykit-git`
-- `lxqt-powermanagement-git`
-- `lxqt-qtplugin-git`
-- `lxqt-runner-git`
-- `lxqt-session-git`
-- `lxqt-themes-git`
-- `pavucontrol-qt-git`
-- `pcmanfm-qt-git`
-- `qterminal-git`
-- `qtermwidget-git`
-- `qtxdg-tools-git`
-- `xdg-desktop-portal-lxqt-git`
-
-### TODO
-
-- Add remaining packages - `lxqt-sudo-git`, `lxqt-openssh-askpass-git`, `screengrab-git`.
-- Double-check base `pkgver` and re-add proper `pkgver()` functions to append git hashes.
-- Re-add `check()` to one or two packages. Re-add PyQt6 bindings to QTermWidget.
+#### TODO
+- Re-add PyQt6 bindings to qtermwidget
+- Re-add check() to libdbusmenu-lxqt
