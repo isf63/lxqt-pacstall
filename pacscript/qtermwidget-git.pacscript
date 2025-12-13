@@ -8,7 +8,7 @@ pkgdesc="A terminal widget for Qt, used by QTerminal"
 arch=('amd64')
 url="https://github.com/lxqt/qtermwidget"
 # Yep, it's messy when you're talking about licenses
-license=("LGPL" "custom:BSD" "custom:Public Domain")
+license=("custom:LGPL" "custom:BSD" "custom:Public Domain")
 depends=('libqt6gui6')
 makedepends=('git' 'cmake' 'lxqt-build-tools-git' 'qt6-tools-dev'
              'python3-pyqt6' 'python3-pyqtbuild' 'sip-tools' 'python3-installer')

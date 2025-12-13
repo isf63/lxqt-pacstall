@@ -1,20 +1,18 @@
-# lxqt-makedeb
-
+# lxqt-pacstall
 
 #### Prerequisites
 
-- Makedeb: https://www.makedeb.org/
-  - Currently a manual bug fix is required: remove `--depth 1` from lines 69 and 75 of `/usr/share/makedeb/source/git.sh`.
+- Pacstall: https://pacstall.dev/
 
 #### Installation
 
-`git clone https://github.com/isf63/lxqt-makedeb`
+`git clone https://github.com/isf63/lxqt-pacstall`
 
 #### Usage
 
 - To build and install all git packages, run `./install.sh all`.
-- To build and install only individual packages run, for example, `./install.sh lximage-qt-git`.
-  - **Note:** Installing individual packages may fail as the packages depend on one another. Refer to the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling .
+- To build and install only individual packages run, e.g., `./install.sh lximage-qt-git`.
+  - **Note:** Installing individual packages may fail as the packages depend on each other. Refer to the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling .
 
 - To update all installed packages to their latest commits, run `./update.sh`.
 

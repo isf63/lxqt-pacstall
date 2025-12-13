@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
 makedeb_install() {
-	cd ./pkgbuild/"$1"
-	if [[ $? != 0 ]]; then
-		exit 1
-	fi
-	makedeb -si --no-confirm
+	cd ./pacscript/ || exit 1
+	pacstall -IP "$1".pacscript
 	if [[ $? != 0 ]]; then
 		cd -
 		exit 1
@@ -51,7 +48,7 @@ makedeb_install_all() {
 	makedeb_install lximage-qt-git
 }
 
-if [[ "$(basename $PWD)" != "lxqt-makedeb" ]]; then
+if [[ "$(basename $PWD)" != "lxqt-pacstall" ]]; then
         exit 1
 fi
 
