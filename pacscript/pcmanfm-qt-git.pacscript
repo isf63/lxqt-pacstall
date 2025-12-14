@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='The LXQt file manager, Qt port of PCManFM'
 arch=('amd64')
 url='https://lxqt-project.org'
-license=('GPL-2.0-only')
+license=('custom:GPL-2.0-only')
 depends=('libqt6gui6' 'libgcc-s1' 'libfm-qt-git' 'libglib2.0-0t64' 'hicolor-icon-theme'
          'libxcb-util1' 'layer-shell-qt' 'lxqt-menu-data-git')
 makedepends=('git' 'cmake' 'lxqt-build-tools-git' 'qt6-tools-dev'

@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="The LXQt image viewer"
 arch=('amd64')
 url="https://github.com/lxqt/$_pkgname"
-license=("GPL-2.0-only")
+license=("custom:GPL-2.0-only")
 depends=('libfm-qt-git' 'libqt6svgwidgets6' 'libqt6svg6' 'hicolor-icon-theme')
 optdepends=(
   'qt6-image-formats-plugins: support for additional image formats (WEBP, TIFF, etc.)'

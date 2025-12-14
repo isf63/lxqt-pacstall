@@ -41,6 +41,7 @@ makedeb_install_all() {
 	makedeb_install lxqt-sudo-git
 	makedeb_install lxqt-openssh-askpass-git
 	makedeb_install lxqt-session-git
+	makedeb_install lxqt-wayland-session-git
 	makedeb_install pavucontrol-qt-git
 	makedeb_install xdg-desktop-portal-lxqt-git
 	makedeb_install lxqt-archiver-git

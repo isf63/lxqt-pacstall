@@ -8,7 +8,7 @@ pkgdesc="LXQt daemon and library for global keyboard shortcuts registration."
 arch=('amd64')
 url="https://lxqt-project.org"
 license=("LGPL-2.1-only")
-depends=('liblxqt-git')
+depends=("liblxqt-git")
 makedepends=('git' 'cmake' 'libkf6windowsystem-dev' 'qt6-svg-dev' 'qt6-tools-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")

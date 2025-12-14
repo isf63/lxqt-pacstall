@@ -19,13 +19,13 @@ remote_hash() {
 	fi
 }
 
-if [[ "$(basename $PWD)" != "lxqt-makedeb" ]]; then
+if [[ "$(basename $PWD)" != "lxqt-pacstall" ]]; then
         exit 1
 fi
 
-for pkg in pkgbuild/*; do
+for pkg in pacscript/*; do
 
-	_pkgname="$(basename $pkg)"
+	_pkgname="$(basename ${pkg//.pacscript})"
 
 	if ! is_installed "$_pkgname"; then
 		echo -e "[NOT INSTALLED]\t$_pkgname"
@@ -34,7 +34,7 @@ for pkg in pkgbuild/*; do
 
 	_local_ver="$(local_version $_pkgname)"
 	_local_hash="$(local_hash $_local_ver)"
-	_remote_hash="$(remote_hash $_pkgname)"
+	_remote_hash="-pacstall1~git$(remote_hash $_pkgname)"
 
 	if [[ "$_remote_hash" == "$_local_hash"* ]]; then
 		echo -e "[UP-TO-DATE]\t$_pkgname"

@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='Openbox configuration tool. Qt port of ObConf'
 arch=('amd64')
 url='http://lxqt.org'
-license=('GPL2')
+license=('GPL-2.0-or-later')
 depends=('hicolor-icon-theme' 'openbox' 'libqt6gui6')
 makedepends=('git' 'cmake' 'openbox-dev' 'qt6-tools-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")

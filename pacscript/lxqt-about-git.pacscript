@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="LXQt about dialog."
 arch=('amd64')
 url="https://lxqt-project.org"
-license=("GPL-2.0-only")
+license=("custom:GPL-2.0-only")
 depends=('liblxqt-git' 'hicolor-icon-theme')
 makedepends=('git' 'cmake' 'qt6-tools-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")
