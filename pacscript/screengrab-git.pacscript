@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="Crossplatform tool for grabbing screenshots of your desktop."
 arch=('amd64')
 url="https://github.com/lxqt/screengrab"
-license=("GPL-2.0-only")
+license=('GPL-2.0-only')
 depends=('libkf6windowsystem6' 'libqtxdg-git' 'hicolor-icon-theme' 'layer-shell-qt' 'libx11-xcb1')
 makedepends=('git' 'cmake' 'qt6-base-private-dev' 'qt6-wayland-private-dev' 'liblayershellqtinterface-dev' 'qt6-tools-dev'
              'lxqt-build-tools-git')

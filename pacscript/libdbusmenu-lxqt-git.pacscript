@@ -9,7 +9,7 @@ arch=('amd64')
 url='https://github.com/lxqt/libdbusmenu-lxqt'
 # https://github.com/lxqt/libdbusmenu-lxqt/blob/master/COPYING
 # All source files contain "any later"
-license=(LGPL-2.0-or-later)
+license=('LGPL-2.0-or-later')
 depends=('libqt6core6t64')
 makedepends=('git' 'cmake' 'doxygen' 'qt6-base-dev')
 #checkdepends=('dbus' 'dbus-x11' 'xvfb')

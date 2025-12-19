@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="LXQt system configuration."
 arch=('amd64')
 url="https://lxqt-project.org"
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('libqt6gui6' 'libxi6' 'libxcursor1' 'libkf6screen8' 'libkscreen-bin' 'liblxqt-git' 'lxqt-menu-data-git' 'hicolor-icon-theme')
 makedepends=('git' 'cmake' 'lxqt-build-tools' 'libudev-dev'
              'libxi-dev' 'libxcb-randr0-dev' 'libxcursor-dev'

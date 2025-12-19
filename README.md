@@ -16,8 +16,7 @@
 
 - To update all installed packages to their latest commits, run `./update.sh`.
 
-- To clean all build files (except for PKGBUILDs), run `./clean.sh`.
-  - To remove unneeded make dependencies, run `apt autopurge`.
+- To remove unneeded make dependencies, run `apt autopurge`.
 
 #### TODO
 - Re-add PyQt6 bindings to QTermWidget

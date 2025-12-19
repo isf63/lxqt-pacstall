@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc=" A simple & lightweight desktop-agnostic Qt file archiver"
 arch=('amd64')
 url="https://lxqt.org"
-license=("GPL-2.0-or-later")
+license=('GPL-2.0-or-later')
 depends=('libfm-qt-git' 'libglib2.0-0t64' 'libjson-glib-1.0-0' 'libxcb-util1')
 makedepends=('git' 'cmake' 'lxqt-build-tools-git' 'libmenu-cache-dev' 'libexif-dev'
 # Need more libxcb-*-dev ?

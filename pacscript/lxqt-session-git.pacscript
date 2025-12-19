@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='LXQt session'
 arch=('amd64')
 url="https://lxqt-project.org"
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('procps' 'layer-shell-qt' 'libkf6windowsystem6' 'layer-shell-qt'
          'xdg-user-dirs' 'qtxdg-tools-git' 'liblxqt-git')
 optdepends=('sddm: The recommended LXQt display manager')

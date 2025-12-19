@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='The LXQt application launcher'
 arch=('amd64')
 url="https://lxqt-project.org"
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('layer-shell-qt' 'libkf6windowsystem6' 'lxqt-globalkeys-git' 'libmuparser2v5')
 makedepends=('git' 'cmake' 'libmuparser-dev' 'liblayershellqtinterface-dev' 'qt6-tools-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")

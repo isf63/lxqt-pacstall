@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="The LXQt policykit authentication agent"
 arch=('amd64')
 url="https://lxqt-project.org"
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('liblxqt-git' 'libpolkit-agent-1-0' 'libpolkit-qt6-1-1')
 makedepends=('git' 'cmake' 'qt6-tools-dev' 'libpolkit-agent-1-dev' 'libpolkit-qt6-1-dev'
              'lxqt-build-tools-git')

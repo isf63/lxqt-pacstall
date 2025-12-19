@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='LXQt OpenSSH password prompt'
 arch=('amd64')
 url="https://lxqt.github.io"
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('liblxqt-git')
 makedepends=('git' 'cmake' 'qt6-tools-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")

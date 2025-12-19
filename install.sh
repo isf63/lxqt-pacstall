@@ -49,9 +49,7 @@ makedeb_install_all() {
 	makedeb_install lximage-qt-git
 }
 
-if [[ "$(basename $PWD)" != "lxqt-pacstall" ]]; then
-        exit 1
-fi
+[[ "$PWD" = */lxqt-pacstall ]] || exit 1
 
 for arg in "$@"; do
 	if [[ $arg == "all" ]]; then

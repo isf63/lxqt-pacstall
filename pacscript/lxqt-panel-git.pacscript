@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='The LXQt desktop panel'
 arch=('amd64')
 url='https://github.com/lxqt/lxqt-panel'
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('libstatgrab10t64' 'libqt6gui6' 'libxtst6' 'libasound2t64' 'libpulse0' 'layer-shell-qt'
          'libkf6solid6' 'libkf6windowsystem6' 'libkwaylandclient6' 'libkf6screendpms8'
          'libsysstat-git' 'libsensors5' 'libdbusmenu-lxqt-git' 'liblxqt-git' 'lxqt-menu-data-git' 'lxqt-globalkeys-git')

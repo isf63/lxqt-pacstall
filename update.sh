@@ -19,9 +19,7 @@ remote_hash() {
 	fi
 }
 
-if [[ "$(basename $PWD)" != "lxqt-pacstall" ]]; then
-        exit 1
-fi
+[[ "$PWD" = */lxqt-pacstall ]] || exit 1
 
 for pkg in pacscript/*; do
 

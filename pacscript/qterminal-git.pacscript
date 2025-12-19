@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="Lightweight Qt-based terminal emulator"
 arch=('amd64')
 url="https://github.com/lxqt/qterminal"
-license=("GPL-2.0-or-later")
+license=('GPL-2.0-or-later')
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 depends=('qtermwidget-git' 'libcanberra0')

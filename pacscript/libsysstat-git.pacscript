@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc='Library to query system information like CPU and memory usage or network traffic'
 arch=('amd64')
 url='https://github.com/lxqt/libsysstat'
-license=("LGPL-2.1-only")
+license=('LGPL-2.1-only')
 depends=('libqt6core6t64')
 makedepends=('git' 'cmake' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")
