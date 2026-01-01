@@ -50,7 +50,7 @@ pkgver() {
 build() {
   cmake -B build -S "$srcdir/$_pkgname" \
     -DCMAKE_INSTALL_PREFIX=/usr
-  make -C build
+  make -j"${NCPU}" -C build
 }
 
 package() {

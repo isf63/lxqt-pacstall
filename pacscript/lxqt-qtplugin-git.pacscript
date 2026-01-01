@@ -24,7 +24,7 @@ build() {
   cd build
   cmake "$srcdir/$_pkgname" \
         -DCMAKE_INSTALL_PREFIX=/usr
-  make
+  make -j"${NCPU}"
 }
 
 package() {

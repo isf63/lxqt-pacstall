@@ -2,7 +2,7 @@
 
 _pkgname=lxqt-panel
 pkgname=$_pkgname-git
-pkgver=2.3.1
+pkgver=2.3.2
 pkgrel=1
 pkgdesc='The LXQt desktop panel'
 arch=('amd64')
@@ -34,7 +34,7 @@ build() {
   cmake "$srcdir/$_pkgname" \
         -DCMAKE_INSTALL_PREFIX=/usr \
        -DCMAKE_INSTALL_LIBDIR=/usr/lib
-  make
+  make -j"${NCPU}"
 }
 
 package() {

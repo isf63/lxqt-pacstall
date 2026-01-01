@@ -27,12 +27,10 @@ pkgver() {
 build() {
   mkdir -p build
   cd build
-
   cmake ../$_pkgname \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib
-
-  make
+  make -j"${NCPU}"
 }
 
 package() {

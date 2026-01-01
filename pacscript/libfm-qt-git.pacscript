@@ -32,7 +32,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX='/usr' \
         -DCMAKE_INSTALL_LIBDIR='lib' \
         -Wno-dev
-  cmake --build build
+  cmake --build build -j"${NCPU}"
 }
 
 package() {

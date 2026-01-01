@@ -8,9 +8,9 @@ pkgdesc="Crossplatform tool for grabbing screenshots of your desktop."
 arch=('amd64')
 url="https://github.com/lxqt/screengrab"
 license=('GPL-2.0-only')
-depends=('libkf6windowsystem6' 'libqtxdg-git' 'hicolor-icon-theme' 'layer-shell-qt' 'libx11-xcb1')
-makedepends=('git' 'cmake' 'qt6-base-private-dev' 'qt6-wayland-private-dev' 'liblayershellqtinterface-dev' 'qt6-tools-dev'
-             'lxqt-build-tools-git')
+depends=('libkf6windowsystem6' 'libqtxdg-git' 'libqt6svg6' 'hicolor-icon-theme' 'layer-shell-qt' 'libx11-xcb1')
+makedepends=('git' 'cmake' 'qt6-base-private-dev' 'qt6-wayland-private-dev' 'liblayershellqtinterface-dev' 'libkf6windowsystem-dev'
+             'qt6-svg-dev' 'qt6-tools-dev' 'libx11-xcb-dev' 'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 source=("git+https://github.com/lxqt/$_pkgname")
@@ -27,7 +27,7 @@ build() {
   cmake "$srcdir/$_pkgname" \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib
-  make
+  make -j"${NCPU}"
 }
 
 package() {

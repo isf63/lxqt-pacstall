@@ -9,7 +9,7 @@ local_version() {
 }
 
 local_hash() {
-	echo "$1" | sed 's/.*\..//; s/..$//'
+	echo "$1" | sed 's/^.*-pacstall1~git//;'
 }
 
 remote_hash() {
@@ -32,7 +32,7 @@ for pkg in pacscript/*; do
 
 	_local_ver="$(local_version $_pkgname)"
 	_local_hash="$(local_hash $_local_ver)"
-	_remote_hash="-pacstall1~git$(remote_hash $_pkgname)"
+	_remote_hash="$(remote_hash $_pkgname)"
 
 	if [[ "$_remote_hash" == "$_local_hash"* ]]; then
 		echo -e "[UP-TO-DATE]\t$_pkgname"

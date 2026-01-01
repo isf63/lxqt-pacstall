@@ -23,7 +23,7 @@ build() {
   cmake -B build -S "$srcdir/$_pkgname" \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib
-  cmake --build build
+  cmake --build build -j"${NCPU}"
 }
 
 package() {

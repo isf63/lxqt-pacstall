@@ -37,7 +37,7 @@ build() {
   cmake \
         -DCMAKE_INSTALL_PREFIX=/usr \
         ..
-  make
+  make -j"${NCPU}"
 }
 
 package() {

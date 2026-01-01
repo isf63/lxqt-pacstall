@@ -26,7 +26,7 @@ pkgver() {
 build() {
   cmake -B build -S libdbusmenu-lxqt \
     -DCMAKE_INSTALL_PREFIX=/usr
-  cmake --build build
+  cmake --build build -j"${NCPU}"
 }
 
 # Tests do not pass on Ubuntu 25.04. For now simply disable them.

@@ -1,63 +1,58 @@
 #!/usr/bin/env bash
 
-makedeb_install() {
-	cd ./pacscript/ || exit 1
-	pacstall -IP "$1".pacscript
-	if [[ $? != 0 ]]; then
-		cd -
-		exit 1
-	fi
-	cd -
+pacstall_install() {
+	pacstall -I --disable-prompts pacscript/"$1".pacscript || exit 1
+	# may still not exit upon errors
 }
 
 # Install order: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling
-makedeb_install_all() {
-	makedeb_install lxqt-build-tools-git
-	makedeb_install libdbusmenu-lxqt-git
+pacstall_install_all() {
+	pacstall_install lxqt-build-tools-git
+	pacstall_install libdbusmenu-lxqt-git
 ####
-	makedeb_install libqtxdg-git
-	makedeb_install lxqt-menu-data-git
+	pacstall_install libqtxdg-git
+	pacstall_install lxqt-menu-data-git
 ####
-	makedeb_install liblxqt-git
-	makedeb_install libsysstat-git
-	makedeb_install qtxdg-tools-git
-	makedeb_install libfm-qt-git
+	pacstall_install liblxqt-git
+	pacstall_install libsysstat-git
+	pacstall_install qtxdg-tools-git
+	pacstall_install libfm-qt-git
 ####
-	makedeb_install lxqt-globalkeys-git
-	makedeb_install lxqt-qtplugin-git
-	makedeb_install qtermwidget-git
+	pacstall_install lxqt-globalkeys-git
+	pacstall_install lxqt-qtplugin-git
+	pacstall_install qtermwidget-git
 ####
-	makedeb_install lxqt-panel-git
-	makedeb_install pcmanfm-qt-git
-	makedeb_install qterminal-git
-	makedeb_install lxqt-powermanagement-git
-	makedeb_install lxqt-runner-git
-	makedeb_install lxqt-themes-git
-	makedeb_install lxqt-admin-git
-	makedeb_install lxqt-notificationd-git
-	makedeb_install lxqt-about-git
-	makedeb_install lxqt-config-git
-	makedeb_install lxqt-policykit-git
-	makedeb_install lxqt-sudo-git
-	makedeb_install lxqt-openssh-askpass-git
-	makedeb_install lxqt-session-git
-	makedeb_install lxqt-wayland-session-git
-	makedeb_install pavucontrol-qt-git
-	makedeb_install xdg-desktop-portal-lxqt-git
-	makedeb_install lxqt-archiver-git
-	makedeb_install screengrab-git
-	makedeb_install lximage-qt-git
+	pacstall_install lxqt-panel-git
+	pacstall_install pcmanfm-qt-git
+	pacstall_install qterminal-git
+	pacstall_install lxqt-powermanagement-git
+	pacstall_install lxqt-runner-git
+	pacstall_install lxqt-themes-git
+	pacstall_install lxqt-admin-git
+	pacstall_install lxqt-notificationd-git
+	pacstall_install lxqt-about-git
+	pacstall_install lxqt-config-git
+	pacstall_install lxqt-policykit-git
+	pacstall_install lxqt-sudo-git
+	pacstall_install lxqt-openssh-askpass-git
+	pacstall_install lxqt-session-git
+	pacstall_install lxqt-wayland-session-git
+	pacstall_install pavucontrol-qt-git
+	pacstall_install xdg-desktop-portal-lxqt-git
+	pacstall_install lxqt-archiver-git
+	pacstall_install screengrab-git
+	pacstall_install lximage-qt-git
 }
 
 [[ "$PWD" = */lxqt-pacstall ]] || exit 1
 
 for arg in "$@"; do
 	if [[ $arg == "all" ]]; then
-		makedeb_install_all
+		pacstall_install_all
 		exit
 	fi
 done
 
 for arg in "$@"; do
-	makedeb_install "$arg"
+	pacstall_install "$arg"
 done

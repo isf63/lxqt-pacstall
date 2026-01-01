@@ -28,7 +28,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DBUILD_TESTS=ON
-  make
+  make -j"${NCPU}"
 }
 
 check() {

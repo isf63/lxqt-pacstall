@@ -30,7 +30,7 @@ build() {
   cd build
   cmake "$srcdir/$_pkgname" \
     -DCMAKE_INSTALL_PREFIX=/usr
-  make
+  make -j"${NCPU}"
 
 #  cd "$srcdir/$_pkgname"/pyqt
 #  CXXFLAGS="-I$PWD/../lib -I$PWD/../../build/lib" LDFLAGS="-L$PWD/../../build" sip-wheel --verbose --qmake /usr/bin/qmake6
