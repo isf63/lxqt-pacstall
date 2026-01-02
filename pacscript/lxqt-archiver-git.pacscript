@@ -10,7 +10,6 @@ url="https://lxqt.org"
 license=('GPL-2.0-or-later')
 depends=('libfm-qt-git' 'libglib2.0-0t64' 'libjson-glib-1.0-0' 'libxcb-util1')
 makedepends=('git' 'cmake' 'lxqt-build-tools-git' 'libmenu-cache-dev' 'libexif-dev'
-# Need more libxcb-*-dev ?
              'libxcb-util-dev' 'libxcb-cursor-dev'
              'libglib2.0-dev'  'libjson-glib-dev' 'qt6-tools-dev')
 provides=("$_pkgname=$pkgver")
