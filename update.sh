@@ -40,9 +40,6 @@ for pkg in pacscript/*; do
 		echo -e "[UPDATING]\t$_pkgname\t($_local_ver -> ${_remote_hash:0:8})"
 
 		find "$pkg" -maxdepth 1 ! -wholename "$pkg" ! -name "PKGBUILD" -exec sudo rm -rf {} +
-		./install.sh "$_pkgname"
-		if [[ $? != 0 ]]; then
-			exit
-		fi
+		./install.sh "$_pkgname" || exit 1
 	fi
 done

@@ -12,7 +12,7 @@
 
 - Build and install all LXQt git packages: `./install.sh all`
 - Build and install only individual packages: e.g. `./install.sh lximage-qt-git`, `./install.sh lxqt-admin-git`
-  
+
   **Note:** Installing individual packages may fail as the packages depend on each other. Refer to the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling
 
 - Update all installed packages to the latest commits: `./update.sh`

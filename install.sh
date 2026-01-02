@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 pacstall_install() {
+	[ -f pacscript/"$1".pacscript ] || exit 1
 	pacstall -I --disable-prompts pacscript/"$1".pacscript || exit 1
 	# may still not exit upon errors
 }
