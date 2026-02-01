@@ -11,7 +11,7 @@ license=('GPL-2.0-or-later')
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 depends=('qtermwidget-git' 'libcanberra0')
-makedepends=('git' 'cmake' 'libcanberra-dev' 'qt6-tools-dev' 'lxqt-build-tools-git')
+makedepends=('git' 'cmake' 'libcanberra-dev' 'liblayershellqtinterface-dev' 'qt6-tools-dev' 'lxqt-build-tools-git')
 source=("git+https://github.com/lxqt/$_pkgname.git")
 sha256sums=('SKIP')
 

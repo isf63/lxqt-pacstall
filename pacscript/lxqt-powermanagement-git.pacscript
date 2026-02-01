@@ -9,7 +9,7 @@ arch=('amd64')
 url="https://lxqt-project.org"
 license=('LGPL-2.1-only')
 depends=('libqt6gui6' 'libqt6svg6' 'upower' 'libkf6idletime6' 'libkf6solid6'
-         'liblxqt-git' 'lxqt-globalkeys-git' 'hicolor-icon-theme')
+         'libxcb-screensaver0' 'liblxqt-git' 'lxqt-globalkeys-git' 'hicolor-icon-theme')
 makedepends=('git' 'cmake' 'libglib2.0-dev' 'libupower-glib-dev' 'qt6-tools-dev' 'qt6-svg-dev'
              'libkf6idletime-dev' 'libkf6solid-dev' 'libkf6windowsystem-dev'
              'libxcb-dpms0-dev' 'libxcb-screensaver0-dev' 'libxcb-randr0-dev'
