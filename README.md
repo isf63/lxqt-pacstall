@@ -3,6 +3,7 @@
 #### Prerequisites
 
 - Pacstall: https://pacstall.dev/
+- Cmake
 
 #### Installation
 
