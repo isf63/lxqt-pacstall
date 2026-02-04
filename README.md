@@ -5,10 +5,6 @@
 - Pacstall: https://pacstall.dev/
 - Cmake
 
-#### Installation
-
-- `git clone https://github.com/isf63/lxqt-pacstall`
-
 #### Usage
 
 - Build and install all LXQt git packages: `./install.sh all`
