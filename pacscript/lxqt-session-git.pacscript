@@ -10,7 +10,7 @@ url="https://lxqt-project.org"
 license=('LGPL-2.1-only')
 depends=('procps' 'layer-shell-qt' 'libkf6windowsystem6' 'layer-shell-qt'
          'libqt6svg6' 'xdg-user-dirs' 'qtxdg-tools-git' 'liblxqt-git')
-optdepends=('sddm: The recommended LXQt display manager')
+#optdepends=('sddm: The recommended LXQt display manager')
 makedepends=('git' 'cmake' 'libproc2-dev' 'qt6-tools-dev' 'qt6-svg-dev' 'liblayershellqtinterface-dev' 'libkf6windowsystem-dev'
              'lxqt-build-tools-git')
 provides=("$_pkgname=$pkgver")
