@@ -13,11 +13,11 @@
 
 - Build and install only individual packages: e.g. `./install.sh lximage-qt-git qps-git`, `./install.sh lxqt-admin-git`
 
-  Note: Installing individual packages may fail as the packages depend on each other. See the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling
+  Note: Installing individual packages may fail as the packages depend on one another. See the build order here: https://github.com/lxqt/lxqt/wiki/Building-from-source#compiling
 
 - Update all installed packages to the most recent commits: `./update.sh`
 
-- Remove leftover and unneeded make dependencies: `apt autopurge`
+- `apt autopurge` to remove leftover, unneeded make dependencies
 
 #### TODO
 - Re-add PyQt6 bindings to qtermwidget
